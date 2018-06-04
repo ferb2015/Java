@@ -40,12 +40,12 @@
     quit
  创建新表：
  
- ```CREATE TABLE newtable(
+    CREATE TABLE newtable(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     author VARCHAR(40) NOT NULL,
     submission_date DATE,
-    PRIMARY KEY ( id )```
+    PRIMARY KEY ( id )
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 如果你不想字段为 NULL 可以设置字段的属性为 NOT NULL， 在操作数据库时如果输入该字段的数据为NULL ，就会报错。
 
@@ -57,12 +57,20 @@ ENGINE 设置存储引擎，CHARSET 设置编码。
 
 通过```show tables;```和```show columns from table;```查看细节
 +-----------------+--------------+------+-----+---------+----------------+
+
 | Field           | Type         | Null | Key | Default | Extra          |
+
 +-----------------+--------------+------+-----+---------+----------------+
+
 | runoob_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+
 | runoob_title    | varchar(100) | NO   |     | NULL    |                |
+
 | runoob_author   | varchar(40)  | NO   |     | NULL    |                |
+
 | submission_date | date         | YES  |     | NULL    |                |
+
 +-----------------+--------------+------+-----+---------+----------------+
+
 4 rows in set (0.01 sec)
 
