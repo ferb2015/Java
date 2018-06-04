@@ -39,6 +39,18 @@
 #### 退出mysql
 
     quit
+#### 导入某路径的.sql文件
+
+    mysql -u root -p
+    create database name;
+    use name;
+    source 『将.sql文件直接拖拽至终端，自动补全其文件目录』
+
+#### 导出.sql文件
+
+    cd 『打开要将.sql文件生成的文件位置』
+    mysqldump -u root -p database_name>sql_name.sql
+
  #### 创建新表：
  
     CREATE TABLE newtable(
@@ -86,3 +98,38 @@ ENGINE 设置存储引擎，CHARSET 设置编码。
     UPDATE table_name SET field1=new-value1, field2=new-value2 [WHERE Clause]
     
 你可以同时更新一个或多个字段。你可以在 WHERE 子句中指定任何条件。你可以在一个单独表中同时更新数据。
+
+
+#### LIKE 子句 查询部分含有的，而不是全匹配的，
+
+ runoob_tbl 表中获取 runoob_author 字段中以 COM 为结尾的的所有记录：
+ 
+    SELECT * from runoob_tbl  WHERE runoob_author LIKE '%COM';
+    
+#### UNION 操作符
+联系多个表，UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据。
+
+下面的 SQL 语句从 "Websites" 和 "apps" 表中选取所有不同的country（只有不同的值）：
+
+    SELECT country FROM Websites
+    UNION
+    SELECT country FROM apps
+    ORDER BY country;
+    
+使用```UNION ALL``` 来选取重复的值：
+
+    SELECT country FROM Websites
+    UNION ALL
+    SELECT country FROM apps
+    ORDER BY country;
+    
+带有 WHERE 的 SQL UNION ALL：
+
+下面的 SQL 语句使用 UNION ALL 从 "Websites" 和 "apps" 表中选取所有的中国(CN)的数据（也有重复的值）：
+
+    SELECT country, name FROM Websites
+    WHERE country='CN'
+    UNION ALL
+    SELECT country, app_name FROM apps
+    WHERE country='CN'
+    ORDER BY country;
