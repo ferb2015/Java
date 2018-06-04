@@ -2,7 +2,8 @@
    
    在终端输入
    
-    xielongdeMacBook-Pro:bin yelong$ git
+    $ git
+    
     usage: git [--version] [--help] [-C <path>] [-c name=value]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
            [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
@@ -50,7 +51,7 @@
 终端输入（最常用的 每一次都要执行的：add、commit）
   
     git add .
-    git  commit -m "add file"     #后面"本次提交的注释"
+    git  commit -m "add file"     #后面"本次提交的注释 每次注释本次修改大致内容"
     
   如果user name 和password忘了 ：
   
