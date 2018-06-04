@@ -87,3 +87,20 @@
   可以把idea的project拖到那个文件夹里，
   在idea界面中，对左边的大文件夹，右键git add/commit。
   再push上去，就可以了。
+  
+  ### github上同步到本地
+  查看远程仓库
+   
+      git remote -v
+从远程获取最新版本到本地
+
+      git fetch origin master
+ git fetch origin master 这句的意思是：从远程的origin仓库的master分支下载代码到本地的origin master
+ 
+ 比较本地的仓库和远程参考的区别
+ 
+      git log -p master.. origin/master
+      
+   把远程下载下来的代码合并到本地仓库，远程的和本地的合并
+   
+      git merge origin/master
