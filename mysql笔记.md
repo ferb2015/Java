@@ -197,3 +197,9 @@ JOIN 按照功能大致分为如下三类：
    
         mysql> SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a, tcount_tbl b WHERE a.runoob_author = b.runoob_author;
         
+#### ALTER命令
+当我们需要修改数据表名或者修改数据表字段时，就需要使用到MySQL ALTER命令。（上面的update是修改某值，alter是修改字段（像age、id这种属性））
+
+    ALTER TABLE testalter_tbl  DROP age;    #删除i字段  
+    ALTER TABLE testalter_tbl ADD i INT FIRST;
+    ALTER TABLE testalter_tbl ADD i INT AFTER c;    #如果你需要指定新增字段的位置，可以使用MySQL提供的关键字 FIRST (设定位第一列)， AFTER 字段名（设定位于某个字段之后）。
