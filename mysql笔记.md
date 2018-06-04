@@ -56,21 +56,5 @@ PRIMARY KEY关键字用于定义列为主键。 您可以使用多列来定义�
 ENGINE 设置存储引擎，CHARSET 设置编码。
 
 通过```show tables;```和```show columns from table;```查看细节
-+-----------------+--------------+------+-----+---------+----------------+
 
-| Field           | Type         | Null | Key | Default | Extra          |
-
-+-----------------+--------------+------+-----+---------+----------------+
-
-| runoob_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
-
-| runoob_title    | varchar(100) | NO   |     | NULL    |                |
-
-| runoob_author   | varchar(40)  | NO   |     | NULL    |                |
-
-| submission_date | date         | YES  |     | NULL    |                |
-
-+-----------------+--------------+------+-----+---------+----------------+
-
-4 rows in set (0.01 sec)
 
