@@ -133,3 +133,67 @@ ENGINE 设置存储引擎，CHARSET 设置编码。
     SELECT country, app_name FROM apps
     WHERE country='CN'
     ORDER BY country;
+    
+#### 排序 ORDER BY 
+    SELECT field1, field2,...fieldN table_name1, table_name2...
+    ORDER BY field1, [field2...] [ASC [DESC]]
+你可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。
+
+你可以设定多个字段来排序。
+
+你可以使用 ```ASC``` 或 ```DESC``` 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序排列。
+
+你可以添加``` WHERE...LIKE ```子句来设置条件。
+    
+    SELECT * from runoob_tbl ORDER BY submission_date ASC;
+
+#### GROUP BY 
+GROUP BY 语句根据一个或多个列对结果集进行分组。
+
+在分组的列上我们可以使用 COUNT, SUM, AVG,等函数。
+
+    >http://www.runoob.com/mysql/mysql-group-by-statement.html
+
+GROUP BY 语法
+
+    SELECT column_name, function(column_name)
+    FROM table_name
+    WHERE column_name operator value
+    GROUP BY column_name;
+
+使用 GROUP BY 语句 将数据表按名字进行分组，并统计每个人有多少条记录：
+    
+    SELECT name, COUNT(*) FROM   employee_tbl GROUP BY name;
+    
+使用 WITH ROLLUP
+
+WITH ROLLUP 可以实现在分组统计数据基础上再进行相同的统计（SUM,AVG,COUNT…)      就是最后多了一行统计值
+
+我们将以上的数据表按名字进行分组，再统计每个人登录的次数：
+
+    SELECT name, SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;
+    
+    SELECT coalesce(name, '总数'), SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;
+    
+#### 连接的使用 
+多表， 从多个数据表中读取数据。
+
+JOIN 在两个或多个表中查询数据。
+
+你可以在 SELECT, UPDATE 和 DELETE 语句中使用 Mysql 的 JOIN 来联合多表查询。
+
+JOIN 按照功能大致分为如下三类：
+
+ - INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录。 取交集
+ - LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录。
+ - RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。
+ 
+   INNER JOIN:
+  
+ 使用MySQL的INNER JOIN(也可以省略 INNER 使用 JOIN，效果一样)来连接以上两张表来读取runoob_tbl表中所有runoob_author字段在tcount_tbl表对应的runoob_count字段值：
+       
+       mysql> SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a INNER JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+等价于
+   
+        mysql> SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a, tcount_tbl b WHERE a.runoob_author = b.runoob_author;
+        
