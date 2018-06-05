@@ -1,4 +1,5 @@
-package com.company;
+//参考自https://www.yiibai.com/jdbc/jdbc-statements.html#article-start     讲得比较详细
+package com.company; 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -20,7 +21,7 @@ public class JdbcTest {
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
            //3.操作数据库，实现增删改查 查询
             stmt = conn.createStatement();
-           ResultSet rs = stmt.executeQuery("SELECT app_name, country FROM apps");
+           ResultSet rs = stmt.executeQuery("SELECT app_name, country FROM apps");//ResultSet executeQuery(String SQL)：返回一个ResultSet对象。 当您希望获得结果集时，请使用此方法，就像使用SELECT语句一样。
            /*或者写成 String sql;  
            sql = "SELECT app_name, country FROM apps";
            ResultSet rs = stmt.executeQuery();*/
