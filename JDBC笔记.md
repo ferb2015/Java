@@ -23,6 +23,7 @@
     
 #### 查询
 操作数据库，实现增删改查
+
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT app_name, country FROM apps");
         // 或者 创建sql语句
