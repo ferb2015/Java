@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Student1 {
+public class JdbcTest {
 
     public static final String URL = "jdbc:mysql://localhost:3306/newbase";
     public static final String USER = "root";
