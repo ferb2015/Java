@@ -16,6 +16,8 @@ public class Api2Controller {
     @RequestMapping("/test")
 
     public static void aa(@RequestParam("bb") String bb) throws Exception {
+        //可以在下一行打一个断点，验证postman的参数有没有被传回来（这时候就不能点run了，而要点run旁的debug）
+        //idea里下方的debugger和console窗口都要经常看一看。
         Connection conn = null;
         Statement stmt = null;
         Class.forName("com.mysql.jdbc.Driver");
