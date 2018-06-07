@@ -15,6 +15,7 @@
 #### 获得数据库连接：
 
     DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/数据库名", "root", "password");//数据库名写要调用的数据库名 每个不同
+    记得写全，写成"jdbc:mysql://localhost:3306/newbase?useUnicode=true&characterEncoding=UTF-8"时，输入中文才不会显示问号？。   
     //或者DriverManager.getConnection("jdbc:mysql://localhost/数据库名", "root", "password")
 #### 创建Statement\PreparedStatement对象：
 
