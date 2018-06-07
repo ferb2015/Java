@@ -31,7 +31,7 @@ public class Api2Controller {
                 "('8', '菜鸟教程', 'http://www.runoob.com', '5892', ''), " +
                 "('9', '微博', 'http://weibo.com/', '20', 'CN'), " +
                 "('10', 'Facebook', 'https://www.facebook.com/', '3', 'USA')";
-        
+        //记得在" "中的类型要加' '
         stmt.executeUpdate(sql);//是executeUpdate而不是executeQuery！
         //不需要新建类型ResultSet rs = stmt.executeQuery(sql);
         //不需要while(rs.next())了
