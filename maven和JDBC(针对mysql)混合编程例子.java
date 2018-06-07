@@ -27,8 +27,8 @@ public class Api2Controller {
         ResultSet rs = stmt.executeQuery("SELECT app_name, country FROM " + bb);//参数是一个string型，我一开始写错了，写成"SELECT app_name, country FROM bb"
         System.out.println(rs);
 
-        while (rs.next()) {
-            
+        while (rs.next()) {//一定要有rs.next()，ResultSet类型一开始不会指向首位，要next()才会指向第一个。
+            //一次次遍历
             // 通过字段检索
             String name = rs.getString("app_name");
             String country = rs.getString("country");
