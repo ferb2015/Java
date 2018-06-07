@@ -91,9 +91,9 @@
   
   2. idea的上方菜单栏 - ```VCS - Import into Version Control - Share Project on Github - token（会话秘匙，下次就不用输密码了） - 输入用户名密码 - new repositories``` 。
   在idea里也可以查看终端：界面下方那栏有一个terminal。然后 ```git add .和git commit 和 git push```
-  ##### idea 下栏切换到 Version Control 点 log 能看到历史记录，如果要回到前一版本，点选某个版本，右键 Copy Revision Number,复制编号
-  ##### 然后在切换到下栏终端 先git stash存储一下当前，再git reset 粘贴刚才的编号，就可以恢复前面的版本了。
-  #### [!] git push 之前，要先git pull一下，因为可能有多人修改文件，pull可以查看最新修改版本，然后可选merge合并修改的版本。
+  ### [!]idea 下栏切换到 Version Control 点 log 能看到历史记录，如果要回到前一版本，点选某个版本，右键 Copy Revision Number,复制编号
+  ### 然后在切换到下栏终端 先git stash存储一下当前，再git reset 粘贴刚才的编号，就可以恢复前面的版本了。
+  ### [!] git push 之前，要先git pull一下，因为可能有多人修改文件，pull可以查看最新修改版本，然后可选merge合并修改的版本。
   
   ### github上同步到本地
   查看远程仓库
