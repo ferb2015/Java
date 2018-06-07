@@ -41,6 +41,16 @@ public class JdbcTest {
          } catch (Exception e){
             // Class.forName 错误
             e.printStackTrace();
-         }
+         }finally{//再确保一次已经close了
+            // 关闭资源
+            try{
+                if(stmt!=null) stmt.close();
+            }catch(SQLException se2){
+            }// 什么都不做
+            try{
+                if(conn!=null) conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }
     }
 }
