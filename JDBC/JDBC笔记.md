@@ -86,3 +86,4 @@ idea里标红是有错误了。
 
 3. 在```src - main - java - com - example - demo```里新建一个class，参见 ```maven和JDBC（针对mysql）的混合编程例子.java```有一个最简单的demo，此时新建的class名为Api2Controller。
 			
+保存的project名```demoo```
