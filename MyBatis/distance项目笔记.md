@@ -1,4 +1,4 @@
-// 路径：/Users/yelong/IdeaProjects/demo3
+# 路径：/Users/yelong/IdeaProjects/demo3
 
 @RestController
 @RequestMapping("/api")
@@ -52,6 +52,8 @@ Json对象中的每一个属性，可以是基础属性，也可以是对象（�
         "distance": 50
     }
 }
+  
+/*  
 
 /*  HTTP知识点  post、get
 post加了一个body。
@@ -64,5 +66,4 @@ post加了一个body。
 
 /* 技术文档
 
-@RestController是
-@RestController
+
