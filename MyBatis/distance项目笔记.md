@@ -106,6 +106,13 @@ Json对象中的每一个属性，可以是基础属性，也可以是对象（�
 idea中自带快捷写出set、get的快捷键：```control + enter```
 idea中自带快捷补全要引用import的类名的快捷键```option + enter```
 
+最后在测试文件中写入：
+    
+    User u = new User();
+    Abb a = new Abb();
+    a.setDistance(flight_distance);
+    u.setData(a);
+
 #### HTTP知识点  post、get
 post加了一个body。
 对于数据表的列数很少，参数很少的适合，多的就不合适了。
