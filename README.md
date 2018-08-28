@@ -1,5 +1,4 @@
 # Java
-学Java的项目
 
 [git的使用帮助](https://github.com/ferb2015/Java/blob/master/git%E4%BD%BF%E7%94%A8.md)
 
